@@ -49,8 +49,7 @@ def gpt_hello(data):
         return jsonify({"error": str(e)}), 500
 
 
-# fetch to the api and send them a request with the notes from a healthcare provider that they made about a patient.
-# Just create a notes class with the patient id
+
 # give a summary back with that AI analyzing the response
 # save the summary to the ai_summary in the notes
 
@@ -61,7 +60,7 @@ def summarize_doctor_notes(note_id):
     # check to see if the note is in the database
 
     try:
-        # query the note and patient
+        # query the note 
         note_from_db = Note.query.get(note_id)
 
         if note_from_db is None:
