@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+blinker = "==1.8.2"
+certifi = "==2024.2.2"
+charset-normalizer = "==3.3.2"
+click = "==8.1.7"
+flask = "==3.0.3"
+flask-sqlalchemy = "==3.1.1"
+idna = "==3.7"
+itsdangerous = "==2.2.0"
+jinja2 = "==3.1.4"
+markupsafe = "==2.1.5"
+requests = "==2.31.0"
+sqlalchemy = "==2.0.30"
+typing-extensions = "==4.11.0"
+urllib3 = "==2.2.1"
+werkzeug = ">=2.3.3"
+openai = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
