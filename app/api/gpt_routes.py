@@ -25,9 +25,13 @@ def gpt_hello(data):
     ## if backend, what type of backend questions. leetcode? Practicle? fetch a database? Random?
     ## if frontend, what type of frontend questions. leetcode? Practicle? fetch a database and show on the ui? random?
 
-    tech_stack = [""]
+    role_type = data['role_type']
+    tech_stack = data["tech_stack"]
     niche = data["niche"]
-
+    level = data['level']
+    ft_bk_full = data['ft_bk_full'] ## frontend, backend, or full stack
+    type_question = data['type_question']
+    
 
     try:
         completion = client.chat.completions.create(
@@ -60,7 +64,7 @@ def summarize_doctor_notes(note_id):
     # check to see if the note is in the database
 
     try:
-        # query the note 
+        # query the note
         note_from_db = Note.query.get(note_id)
 
         if note_from_db is None:
